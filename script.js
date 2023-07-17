@@ -44,9 +44,9 @@ function makeAllplay() {
         element.classList.add('fa-circle-play')
     })
 }
-function songName(){
-        SongName.innerText = `${songs[songIndex].SongName}`;
-    }
+function songName() {
+    SongName.innerText = `${songs[songIndex].SongName}`;
+}
 
 // Handling the play/pause click
 playbutton.addEventListener('click', () => {
@@ -96,6 +96,9 @@ forward.addEventListener('click', () => {
         audioElement.play()
         songName()
         bottomplaybuttonEngine()
+        makeAllplay()
+        songItemPlay[songIndex].classList.remove('fa-circle-play');
+        songItemPlay[songIndex].classList.add('fa-circle-pause');
     }
     else {
         audioElement.src = `Tools/songs/0.mp3`;
@@ -103,36 +106,51 @@ forward.addEventListener('click', () => {
         songIndex = 0
         songName()
         bottomplaybuttonEngine()
-        
+        makeAllplay()
+        songItemPlay[songIndex].classList.remove('fa-circle-play');
+        songItemPlay[songIndex].classList.add('fa-circle-pause');
+
     }
 })
 let backward = document.getElementById('backwardbutton');
-backward.addEventListener('click',()=>{
-    if (songIndex >= 1 && songIndex <= 8 ) {
+backward.addEventListener('click', () => {
+    if (songIndex >= 1 && songIndex <= 8) {
         songIndex -= 1
         audioElement.src = `Tools/songs/${songIndex}.mp3`;
         audioElement.play()
         songName()
-    } else{
+        makeAllplay()
+        songItemPlay[songIndex].classList.remove('fa-circle-play');
+        songItemPlay[songIndex].classList.add('fa-circle-pause');
+    } else {
         audioElement.src = `Tools/songs/8.mp3`;
         audioElement.play()
         songIndex = 8
         songName()
+        makeAllplay()
+        songItemPlay[songIndex].classList.remove('fa-circle-play');
+        songItemPlay[songIndex].classList.add('fa-circle-pause');
     }
 })
-setInterval(()=>{
+setInterval(() => {
     if (songBar.value == '100') {
         if (songIndex >= 0 && songIndex <= 7) {
             songIndex += 1
             audioElement.src = `Tools/songs/${songIndex}.mp3`;
             audioElement.play()
             songName()
+            makeAllplay()
+            songItemPlay[songIndex].classList.remove('fa-circle-play');
+            songItemPlay[songIndex].classList.add('fa-circle-pause');
         }
         else {
             audioElement.src = `Tools/songs/0.mp3`;
             audioElement.play()
             songIndex = 0
-            songName()  
+            songName()
+            makeAllplay()
+            songItemPlay[songIndex].classList.remove('fa-circle-play');
+            songItemPlay[songIndex].classList.add('fa-circle-pause');
         }
     }
 })
