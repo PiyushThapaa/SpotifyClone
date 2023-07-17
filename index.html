@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Spotify Clone</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="shortcut icon" href="Tools/spotifylogo.png" type="image/x-icon">
+  </head>
+  <body>
+    <nav>
+      <ul>
+        <li class="logo">
+          <img src="Tools/spotifylogo.png" alt="Spotify Logo" />Spotify
+        </li>
+      </ul>
+    </nav>
+    <main>
+      <div class="container">
+        <div class="songlist">
+          <h1>My Favourite Songs</h1>
+            <div class="songItem">
+                <img src="Tools/banners/pinkblue banner.jpg" alt="1">
+                <span>Pink Blue</span>
+                <span class="songlistplay"><span>3:25 <i id="0" class="fa-regular songItemPlay fa-circle-play"></i></span>
+            </div>
+            <div class="songItem">
+                <img src="Tools/banners/pinkblue banner.jpg" alt="1">
+                <span>Pink Blue</span>
+                <span class="songlistplay"><span>3:25 <i id="1" class="fa-regular songItemPlay fa-circle-play"></i></span>
+            </div>
+            <div class="songItem">
+                <img src="Tools/banners/pinkblue banner.jpg" alt="1">
+                <span>Pink Blue</span>
+                <span class="songlistplay"><span>3:25 <i id="2" class="fa-regular songItemPlay fa-circle-play"></i></span>
+            </div>
+            <div class="songItem">
+                <img src="Tools/banners/pinkblue banner.jpg" alt="1">
+                <span>Pink Blue</span>
+                <span class="songlistplay"><span>3:25 <i id="3" class="fa-regular songItemPlay fa-circle-play"></i></span>
+            </div>
+            <div class="songItem">
+                <img src="Tools/banners/pinkblue banner.jpg" alt="1">
+                <span>Pink Blue</span>
+                <span class="songlistplay"><span>3:25 <i id="4" class="fa-regular songItemPlay fa-circle-play"></i></span>
+            </div>
+            <div class="songItem">
+                <img src="Tools/banners/pinkblue banner.jpg" alt="1">
+                <span>Pink Blue</span>
+                <span class="songlistplay"><span>3:25 <i id="5" class="fa-regular songItemPlay fa-circle-play"></i></span>
+            </div>
+            <div class="songItem">
+                <img src="Tools/banners/pinkblue banner.jpg" alt="1">
+                <span>Pink Blue</span>
+                <span class="songlistplay"><span>3:25 <i id="6" class="fa-regular songItemPlay fa-circle-play"></i></span>
+            </div>
+            <div class="songItem">
+                <img src="Tools/banners/pinkblue banner.jpg" alt="1">
+                <span>Pink Blue</span>
+                <span class="songlistplay"><span>3:25 <i id="7" class="fa-regular songItemPlay fa-circle-play"></i></span>
+            </div>
+            <div class="songItem">
+                <img src="Tools/banners/pinkblue banner.jpg" alt="1">
+                <span>Pink Blue</span>
+                <span class="songlistplay"><span>3:25 <i id="8" class="fa-regular songItemPlay fa-circle-play"></i></span>
+            </div>
+            
+        </div>
+      </div>
+      <div class="bottom">
+        <input type="range" name="range" id="songprogress" min="0" value="0" max="100" />
+        <div class="songinfo">
+            <img src="Tools/player.gif" width="34px" alt="" id="gif"><span id="songName"></span>
+        </div>
+        <div class="icons">
+          <i class="fa-solid fa-backward-step fa-2xl" id="backwardbutton"></i>
+          <i class="fa-regular fa-circle-play fa-2xl" id="playbutton"></i>
+          <i class="fa-solid fa-forward-step fa-2xl" id="forwardbutton"></i>
+        </div>
+      </div>
+    </main>
+    <script
+      src="https://kit.fontawesome.com/edc2a42261.js"
+      crossorigin="anonymous"
+    ></script>
+    <script src="script.js"></script>
+  </body>
+</html>
