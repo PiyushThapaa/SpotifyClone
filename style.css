@@ -95,3 +95,6 @@ nav ul li{
     opacity: 0;
     transition: opacity 0.4s ease-in;
 }
+input[type="range"] {
+    accent-color: rgb(255, 255, 255);
+  }
